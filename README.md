@@ -18,8 +18,8 @@ Este projeto é um sistema desktop de cadastro de pessoas desenvolvido em Java c
 
 1. Instale o JDK 25.
 2. Abra um terminal na pasta do projeto.
-3. Execute `& "C:\Users\luiza\Tools\apache-maven-3.9.9\bin\mvn.cmd" clean test`.
-4. Execute `& "C:\Users\luiza\Tools\apache-maven-3.9.9\bin\mvn.cmd" exec:java -Dexec.mainClass="br.faculdade.cadastro.Main"`.
+3. Execute `& "C:\Users\SeuUsuarioWindows\Tools\apache-maven-3.9.9\bin\mvn.cmd" clean test`.
+4. Execute `& "C:\Users\SeuUsuarioWindows\Tools\apache-maven-3.9.9\bin\mvn.cmd" exec:java -Dexec.mainClass="br.faculdade.cadastro.Main"`.
 
 O banco será criado automaticamente na pasta `data/cadastro.mv.db`.
 
