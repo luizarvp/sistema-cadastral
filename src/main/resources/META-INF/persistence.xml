@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Configura o contexto JPA da aplicação. -->
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <!-- Define uma unidade de persistência chamada cadastroPU. -->
+    <persistence-unit name="cadastroPU" transaction-type="RESOURCE_LOCAL">
+        <!-- Configura o banco H2 armazenado na pasta data. -->
+        <properties>
+            <!-- Informa a classe de conexão JDBC. -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <!-- Define o arquivo do banco e cria o diretório quando necessário. -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:file:./data/cadastro;AUTO_SERVER=TRUE"/>
+            <!-- Usa o usuário padrão do H2. -->
+            <property name="jakarta.persistence.jdbc.user" value="sa"/>
+            <!-- Mantém a senha vazia para uso acadêmico local. -->
+            <property name="jakarta.persistence.jdbc.password" value=""/>
+            <!-- Cria ou atualiza a tabela automaticamente. -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <!-- Permite diagnóstico das operações SQL no console. -->
+            <property name="hibernate.show_sql" value="true"/>
+            <!-- Organiza o SQL exibido em várias linhas. -->
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

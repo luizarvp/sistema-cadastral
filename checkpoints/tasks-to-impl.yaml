@@ -1,0 +1,14 @@
+# Registro mínimo de rastreabilidade da implementação.
+tasks:
+  - id: T001
+    description: Criar entidade Pessoa com JPA
+    status: done
+  - id: T002
+    description: Criar repositório CRUD com JPA
+    status: done
+  - id: T003
+    description: Criar interface Swing
+    status: done
+  - id: T004
+    description: Criar manual e documentação
+    status: done

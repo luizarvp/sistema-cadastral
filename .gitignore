@@ -1,0 +1,7 @@
+# Ignora arquivos compilados pelo Java.
+target/
+# Ignora arquivos locais do banco H2.
+data/
+# Ignora arquivos temporários do sistema.
+*.log
+*.tmp

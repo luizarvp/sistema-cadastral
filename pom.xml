@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Define o projeto Maven e suas dependências. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Seleciona o formato atual do arquivo Maven. -->
+    <modelVersion>4.0.0</modelVersion>
+    <!-- Identifica a empresa ou domínio do projeto. -->
+    <groupId>br.faculdade</groupId>
+    <!-- Define o nome principal do projeto. -->
+    <artifactId>sistema-cadastro-pessoas</artifactId>
+    <!-- Define a versão atual da aplicação. -->
+    <version>1.0.0</version>
+    <properties>
+        <!-- Configura a versão do código-fonte Java. -->
+        <maven.compiler.release>25</maven.compiler.release>
+        <!-- Define a codificação dos arquivos-fonte. -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <!-- Disponibiliza a API padrão JPA. -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <!-- Implementa JPA com Hibernate. -->
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.4.10.Final</version>
+        </dependency>
+        <!-- Fornece o banco de dados H2 embutido. -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.2.224</version>
+        </dependency>
+        <!-- Disponibiliza JUnit para testes automatizados. -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.3</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <!-- Compila as classes Java do projeto. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+            </plugin>
+            <!-- Executa os testes JUnit. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.3.1</version>
+            </plugin>
+            <!-- Permite iniciar a interface com um comando Maven simples. -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

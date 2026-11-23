@@ -1,0 +1,7 @@
+# Relatório estruturado desta implementação.
+batch_status: COMPLETED
+tests:
+  - name: "PessoaRepositoryTest"
+    status: PASS
+    count: 2
+warnings: []
